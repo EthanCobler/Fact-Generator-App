@@ -8,47 +8,16 @@
         <p id="fact-ask">Click the button for a random fact</p>
         <button id="fact-button">I HAVE A FACT!!!</button>
 
-        <div id="output">Output: </div>
+        <section class="output-section" id="output">
+            <div class="container">
+                <div id="output">Output:</div>
 
-        <script>
+                <button id="fetch-btn" class="fetch-btn">I HAVE A USELESS FACT!!!</button>
 
-    // Make list of facts
-    let facts = [
-        "Honey never spoils",
-        "A day on Venus is longer than a year on Venus",
-        "Bananas are berries but strawberries are not",
-        "I love Naamah",
-        "Giraffes tongues are black",
-        "I'm struggling in school",
-        "The pope can't be an organ donor",
-        "Sudan has more pyramids than any other contry in the world",
-        "No number before 1,000 has the vowel A",
-        "Most people who have schizophrenia start to show signs or experience symptoms between 16 and 21",
-        "Julia Hekking likes girls",
-        "Reman is color blind",
-        "Nepal's flag is the only non-rectangular flag in the world",
-        "University of Utah was one of the first schools to join the internet",
-        "Liverpool is washed",
-        "Barcelona only has 5 champions league",
-        "Arsenal has not won a champions league",
-        "Arsenal is the only team to have won the premier league undefeated",
-        "Arsene Wenger was so tough, people thought the club was named after him",
-        "Chelsea is the only club with every European trophy"
-    ]
-
-    // Find button and tell it what to do
-    let button = document.getElementById("fact-button");
-    button.addEventListener("click", showRandomFact);
-
-    // Runs when button is clicked, from the addEventListener
-    function showRandomFact(){
-        let randomIndex = Math.floor(Math.random() * facts.length);
-        let randomFact = facts[randomIndex];
-
-        let factAsk = document.getElementById("fact-ask");
-        factAsk.textContent = randomFact;
-    }
-</script>
+            </div>
+        </section>
+        
+    <script src="script.js"></script>
     </body>
 </html>
 
