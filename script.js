@@ -1,19 +1,6 @@
 const api = "https://uselessfacts.jsph.pl/random.json?language=en";
 
-fetch(api)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-    });
-
-
-const output = document.getElementById(output)
-
-fetch(api)
-    .then(response => response.json())
-    .then(data => {
-        output.innerText = data.text
-    })
+const output = document.getElementById("fact-display")
 
 const fetchButton = documment.getElementById("fetch-btn");
 
@@ -24,8 +11,6 @@ fetchButton.addEventListener("click", function() {
             output.innerText = data.text;
         });
 });
-
-
 
 
 // Make list of facts
@@ -54,13 +39,21 @@ let facts = [
 
     // Find button and tell it what to do
     let button = document.getElementById("fact-button");
-    button.addEventListener("click", showRandomFact);
+    // button.addEventListener("click", showRandomFact);
 
     // Runs when button is clicked, from the addEventListener
-    function showRandomFact(){
+    // function showRandomFact(){
+    //     let randomIndex = Math.floor(Math.random() * facts.length);
+    //     let randomFact = facts[randomIndex];
+
+    //     let factAsk = document.getElementById("fact-ask");
+    //     factAsk.textContent = randomFact;
+    // }
+
+    button.addEventListener("click", function(){
         let randomIndex = Math.floor(Math.random() * facts.length);
         let randomFact = facts[randomIndex];
 
         let factAsk = document.getElementById("fact-ask");
         factAsk.textContent = randomFact;
-    }
+    })
